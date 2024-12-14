@@ -1,0 +1,257 @@
+/* @font-face 등 폰트 설정은 필요에 따라 추가 */
+html {
+    font-size: 100%;
+    background-color: #331D3B;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Pretendard", sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    scrollbar-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    color: #fff;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.logo {
+    width: 100px;
+}
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a.current-menu {
+    border-bottom: 2px solid #fff;
+}
+
+.last-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* index */
+/* 전체 컨테이너 및 화면 */
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.screen {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+}
+.screen1 {
+    background: #331D3B;
+}
+.screen1 .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+.screen1 .first-screen-overlay img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* logo */
+.logo {
+    position: absolute;
+    width: 100px;
+}
+
+
+.first-screen-overlay img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/* 두 번째 화면 */
+.screen2 {
+    background: #331D3B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.screen2 h1 {
+    font-size: 2rem;
+    /* margin-bottom: 20px; */
+}
+.screen2 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.first-screen-overlay{
+    width: 500px;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.screen img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* about */
+/* 상단 big-bg 섹션 */
+.big-bg {
+    background: url('img/about_background.png') no-repeat left center;
+    background-size: cover;
+    height: 300px; /* 원하는 높이로 조정 */
+}
+
+.image-block {
+    display: absolute;
+}
+
+.image-caption{
+    text-align: center;
+}
+
+/* trends */
+.trends-nav{
+    text-align: center;
+    margin: 20px 0;
+    border-bottom: 1px solid #444;
+}
+.trends-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.trends-nav a {
+    font-size: 18px;
+}
+
+
+
+/* contact */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+}
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.contact-form {
+    display: inline-block;
+    text-align: left;
+}
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+}
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+.submit-btn {
+    display: block;
+    width: 300px;
+    padding: 15px;
+    background: #fff;
+    color: #331D3B;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background: #ddd;
+}
+
+/* contact : location section */
+.location-section {
+    padding: 60px 0;
+}
+.location-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+.location-info {
+    max-width: 400px;
+    line-height: 1.6;
+}
+.sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.location-map iframe {
+    border: 0;
+    border-radius: 8px;
+}
+
+/* footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer-email small {
+    color: #fff;
+}
