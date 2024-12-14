@@ -255,3 +255,10 @@ footer {
 .footer-email small {
     color: #fff;
 }
+
+/* 반응형 웹 */
+@media (max-width: 600px) {
+    #location .wrapper{
+        flex-direction: column;
+    }
+}
